@@ -77,49 +77,6 @@ $(document).ready(function(){
     }
   }); }
 }); 
-function onFoucsTextField(name)
-{
-	console.log("Processing javascript");
-	if(window.XMLHttpRequest)
-		{
-		req=new XMLHttpRequest();
-		}
-	else if(window.ActiveXObject)
-		{
-		req=new ActiveXObject("Microsoft.XMLHTTP");
-		}
-	//active=document.activeElement.name;
-	var url="SuggestServlet?name="+name;
-	
-	req.onreadystatechange=function(){
-		
-		if(req.readyState==4 && req.status==200){
-			//document.getElementById("product_suggest").innerHTML=req.responseText;
-			console.log("changed value");
-		console.log(req.responseText);
-			res=req.responseText;
-					}
-	};
-	req.open("GET",url,true);
-	req.send();
-	return res;
-	
-}
-function getResponse()
-{
-	console.log("getting respose");
-if(req.readyState==4)
-	{
-	if(req.status==200)
-		{
-		console.log("found it");
-		document.getElementById("product_suggest").innerHTML=req.responseText;
-		var link=req.responseText;
-		return link;
-		}
-	}
-
-}
 
 			/*
 				declare gloabl box variable,
