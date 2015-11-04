@@ -1,0 +1,6 @@
+---
+applications:
+- name: SignupForm
+  memory: 512M 
+  host: SignupHost 
+  path: target/SignupForm.war
