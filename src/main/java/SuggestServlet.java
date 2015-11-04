@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import verizon.ConfigReader;
+//import verizon.ConfigReader;
 
 
 @WebServlet("/SuggestServlet")
@@ -38,9 +38,9 @@ public class SuggestServlet extends HttpServlet {
     		String field_name=request.getParameter("name");
     		System.out.println(field_name);
     		//call the method that gives link for the respective field
-    		String link=new ConfigReader().returnVideoURL(field_name);
-    		System.out.println(link);
-    		out.println(link);
+    		//String link=new ConfigReader().returnVideoURL(field_name);
+    		//System.out.println(link);
+    		//out.println(link);
     		
     	}
     	catch(Exception e)
